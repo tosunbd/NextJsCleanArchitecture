@@ -2,10 +2,9 @@ using System.Collections.Generic;
 using System.Reflection.Emit;
 
 using Domain.Entities;
-
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Data;
+namespace Infrastructure.Data.DataContext;
 
 public class ApplicationDbContext : DbContext
 {

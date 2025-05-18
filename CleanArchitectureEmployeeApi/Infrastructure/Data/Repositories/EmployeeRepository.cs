@@ -1,12 +1,10 @@
 ﻿using Application.Contracts;
 
 using Domain.Entities;
-
-using Infrastructure.Data;
-
+using Infrastructure.Data.DataContext;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Repositories;
+namespace Infrastructure.Data.Repositories;
 
 public class EmployeeRepository : IEmployeeRepository
 {

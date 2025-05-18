@@ -1,9 +1,7 @@
 using Application.Contracts;
 
 using Domain.Entities;
-
-using Infrastructure.Data;
-
+using Infrastructure.Data.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;

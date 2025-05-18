@@ -6,8 +6,8 @@ using Application.Validators;
 using FluentValidation.AspNetCore;
 
 using Infrastructure;
-using Infrastructure.Data;
-using Infrastructure.Repositories;
+using Infrastructure.Data.DataContext;
+using Infrastructure.Data.Repositories;
 using Infrastructure.Services;
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;

@@ -1,6 +1,6 @@
 ﻿using System.Text;
+using Infrastructure.Data.DataContext;
 
-using Infrastructure.Data;
 
 
 //using EmployeeApi.Data;
