@@ -26,7 +26,20 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginRequest request)
     {
-        var token = await _userService.LoginAsync(request.Email, request.Password);
-        return Ok(new { token });
+        try
+        {
+            var token = await _userService.LoginAsync(request.Email, request.Password);
+            return Ok(new { token });
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Unauthorized(new { message = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Login error: {ex.Message}");
+            return StatusCode(500, new { message = "An unexpected error occurred." });
+        }
     }
+
 }
